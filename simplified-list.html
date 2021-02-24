@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplified List</title>
+    <style>
+      .is-checked {
+        display: none;
+      }
+
+      #my-checkbox:checked + span .is-checked {
+        display: inline;
+      }
+
+      #my-checkbox:checked + span .not-checked {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="my-checkbox">My Favorite Color</label>
+    <input type="text" name="color" list="colors" />
+    <datalist id="colors">
+      <option value="Magenta"></option>
+      <option value="Purple"></option>
+      <option value="Ultraviolet"></option>
+    </datalist>
+    <br />
+    <br />
+    <label for="my-checkbox">
+      <input id="my-checkbox" type="checkbox" />
+      <span>
+        <span class="not-checked">Not Checked</span>
+        <span class="is-checked">Checked</span>
+      </span>
+    </label>
+  </body>
+</html>
